@@ -204,6 +204,42 @@ public class main {
             }
         }
         System.out.println(list);
+        
+        //O(N*K) solution:
+        /*public static ArrayList<Integer> table1(ArrayList<Integer> s){
+        HashMap<Integer,Integer> ss = new HashMap();
+        ArrayList<Integer> ssss = new ArrayList<>();
+        int count;
+        for(int i = 0; i < s.size(); i+=2){
+            count = 0;
+            for(int c = 0; c < 6; c++){
+                if(ss.containsKey(s.get(i)-c)){
+                        if (ss.get(s.get(i) - c) >= s.get(i+1) - 5 && ss.get(s.get(i) - c) <= s.get(i+1) + 5) {
+                            count++;
+                            break;
+                        }
+                }
+                if(ss.containsKey(s.get(i)+c)){
+                    if (ss.get(s.get(i) + c) >= s.get(i+1) - 5 && ss.get(s.get(i) + c) <= s.get(i+1) + 5) {
+                        count++;
+                        break;
+                    }
+                }
+            }
+            if(count < 1){
+                int c = i;
+                int z = 0;
+                while(ss.containsKey(s.get(c))){
+                    s.set(c,s.get(c)+1);
+                    z++;
+                }
+                ss.put(s.get(i),s.get(i + 1));
+                ssss.add(s.get(i)-z);
+                ssss.add(s.get(i+1));
+            }
+        }
+        return ssss;
+    }*/
     }
     public static void SearchImageUnless(String firstimg, String secimg, Integer x, Integer y) throws IOException {
         list.clear();
